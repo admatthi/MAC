@@ -18,6 +18,7 @@ class HomeTableViewController: UITableViewController{
         super.viewDidLoad()
         alarmScheduler.checkNotification()
         tableView.allowsSelectionDuringEditing = true
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +33,11 @@ class HomeTableViewController: UITableViewController{
             self.navigationItem.leftBarButtonItem = nil
         }
     }
-    
+    @objc func onDidReceiveData(_ notification: Notification)
+    {
+        alarmModel = Alarms()
+        tableView.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -191,3 +196,8 @@ class HomeTableViewController: UITableViewController{
 }
 
 
+extension Notification.Name {
+    static let didReceiveData = Notification.Name("didReceiveData")
+    static let didCompleteTask = Notification.Name("didCompleteTask")
+    static let completedLengthyDownload = Notification.Name("completedLengthyDownload")
+}
