@@ -49,42 +49,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         
-//        //show an alert window
-//        let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
-//        var isSnooze: Bool = false
-//        var soundName: String = ""
-//        var index: Int = -1
-//        if let userInfo = notification.userInfo {
-//            isSnooze = userInfo["snooze"] as! Bool
-//            soundName = userInfo["soundName"] as! String
-//            index = userInfo["index"] as! Int
-//        }
-//
-//        playSound(soundName)
-//        //schedule notification for snooze
-//        if isSnooze {
-//            let snoozeOption = UIAlertAction(title: "Snooze", style: .default) {
-//                (action:UIAlertAction)->Void in self.audioPlayer?.stop()
-//                self.alarmScheduler.setNotificationForSnooze(snoozeMinute: 9, soundName: soundName, index: index)
-//            }
-//            storageController.addAction(snoozeOption)
-//        }
-//        let stopOption = UIAlertAction(title: "OK", style: .default) {
-//            (action:UIAlertAction)->Void in self.audioPlayer?.stop()
-//            AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate)
-//            self.alarmModel = Alarms()
-//            self.alarmModel.alarms[index].onSnooze = false
-//            //change UI
-//            var mainVC = self.window?.visibleViewController as? HomeTableViewController
-//            if mainVC == nil {
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? HomeTableViewController
-//            }
-//            mainVC!.changeSwitchButtonState(index: index)
-//        }
-//
-//        storageController.addAction(stopOption)
-//        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
+        //show an alert window
+        let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
+        var isSnooze: Bool = false
+        var soundName: String = ""
+        var index: Int = -1
+        if let userInfo = notification.userInfo {
+            isSnooze = userInfo["snooze"] as! Bool
+            soundName = userInfo["soundName"] as! String
+            index = userInfo["index"] as! Int
+        }
+
+        playSound(soundName)
+        //schedule notification for snooze
+        if isSnooze {
+            let snoozeOption = UIAlertAction(title: "Snooze", style: .default) {
+                (action:UIAlertAction)->Void in self.audioPlayer?.stop()
+                self.alarmScheduler.setNotificationForSnooze(snoozeMinute: 9, soundName: soundName, index: index)
+            }
+            storageController.addAction(snoozeOption)
+        }
+        let stopOption = UIAlertAction(title: "OK", style: .default) {
+            (action:UIAlertAction)->Void in self.audioPlayer?.stop()
+            AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate)
+            self.alarmModel = Alarms()
+            self.alarmModel.alarms[index].onSnooze = false
+            //change UI
+            var mainVC = self.window?.visibleViewController as? HomeTableViewController
+            if mainVC == nil {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? HomeTableViewController
+            }
+            mainVC!.changeSwitchButtonState(index: index)
+        }
+
+        storageController.addAction(stopOption)
+        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
     }
     
     //snooze notification handler when app in background

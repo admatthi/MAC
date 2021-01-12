@@ -192,7 +192,7 @@ class HomeTableViewController: UITableViewController{
                 let sw = cell.accessoryView as! UISwitch
                 if alarmModel.alarms[index].repeatWeekdays.isEmpty {
                     sw.setOn(false, animated: false)
-                    cell.backgroundColor = UIColor.groupTableViewBackground
+                    cell.backgroundColor = UIColor.black
                     cell.textLabel?.alpha = 0.5
                     cell.detailTextLabel?.alpha = 0.5
                 }

@@ -24,7 +24,6 @@
 		4EE5F20525AD27D200B9C2EE /* WeekdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F20425AD27D200B9C2EE /* WeekdaysViewController.swift */; };
 		4EE5F20A25AD285A00B9C2EE /* TitleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */; };
 		9D8D248425ABABEB00B4E69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248325ABABEB00B4E69D /* AppDelegate.swift */; };
-		9D8D248625ABABEB00B4E69D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248525ABABEB00B4E69D /* SceneDelegate.swift */; };
 		9D8D248825ABABEB00B4E69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248725ABABEB00B4E69D /* ViewController.swift */; };
 		9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248925ABABEB00B4E69D /* Main.storyboard */; };
 		9D8D248D25ABABF000B4E69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248C25ABABF000B4E69D /* Assets.xcassets */; };
@@ -69,7 +68,6 @@
 		4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleEditViewController.swift; sourceTree = "<group>"; };
 		9D8D248025ABABEB00B4E69D /* Motivational Alarm Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motivational Alarm Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8D248325ABABEB00B4E69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D8D248525ABABEB00B4E69D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9D8D248725ABABEB00B4E69D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9D8D248A25ABABEB00B4E69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D8D248C25ABABF000B4E69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				4EE5F18525AD235500B9C2EE /* models */,
 				4EE5F18425AD234600B9C2EE /* views */,
 				9D8D248325ABABEB00B4E69D /* AppDelegate.swift */,
-				9D8D248525ABABEB00B4E69D /* SceneDelegate.swift */,
 				9D8D248725ABABEB00B4E69D /* ViewController.swift */,
 				9D8D248925ABABEB00B4E69D /* Main.storyboard */,
 				9D8D248C25ABABF000B4E69D /* Assets.xcassets */,
@@ -365,7 +362,6 @@
 				9D8D248425ABABEB00B4E69D /* AppDelegate.swift in Sources */,
 				4EE5F1EB25AD24D300B9C2EE /* Identifier.swift in Sources */,
 				4EE5F20A25AD285A00B9C2EE /* TitleEditViewController.swift in Sources */,
-				9D8D248625ABABEB00B4E69D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
