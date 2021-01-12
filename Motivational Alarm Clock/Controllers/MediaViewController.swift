@@ -34,6 +34,9 @@ class MediaViewController: UITableViewController, MPMediaPickerControllerDelegat
         header.textLabel?.font = UIFont.boldSystemFont(ofSize: 10)
         header.textLabel?.frame = header.frame
         header.textLabel?.textAlignment = .left
+        header.contentView.backgroundColor = #colorLiteral(red: 0.1097619608, green: 0.1096628532, blue: 0.1179399118, alpha: 1)
+//        header.textLabel?.tintColor = .white
+//        header.textLabel?.textColor = .white
     }
     
 
@@ -85,6 +88,9 @@ class MediaViewController: UITableViewController, MPMediaPickerControllerDelegat
             cell = UITableViewCell(
                 style: UITableViewCell.CellStyle.default, reuseIdentifier: Id.musicIdentifier)
         }
+        cell!.backgroundColor = #colorLiteral(red: 0.1725008786, green: 0.1724130809, blue: 0.1806807518, alpha: 1)
+        cell?.tintColor = .white
+        cell!.textLabel?.textColor = .white
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 cell!.textLabel!.text = "More Tones"
