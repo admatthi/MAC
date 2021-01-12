@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B9BCD92F-529A-4F51-8076-C67852422BE5"
+            uuid = "42359E81-D73B-4E0C-A034-1B1A9E4AAC71"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Motivational Alarm Clock/helpers/Scheduler.swift"
+            filePath = "Motivational Alarm Clock/Controllers/HomeTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
-            landmarkName = "checkNotification()"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "switchTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -10,7 +10,7 @@ import MediaPlayer
 
 class MediaViewController: UITableViewController, MPMediaPickerControllerDelegate  {
     
-    fileprivate let numberOfRingtones = 2
+    var sounds:[String] = ["newtrack2","bell","tickle"]
     var mediaItem: MPMediaItem?
     var mediaLabel: String!
     var mediaID: String!
@@ -59,7 +59,7 @@ class MediaViewController: UITableViewController, MPMediaPickerControllerDelegat
             return 1
         }
         else {
-            return numberOfRingtones
+            return sounds.count
         }
     }
     
@@ -107,12 +107,8 @@ class MediaViewController: UITableViewController, MPMediaPickerControllerDelegat
             }
         }
         else if indexPath.section == 3 {
-            if indexPath.row == 0 {
-                cell!.textLabel!.text = "bell"
-            }
-            else if indexPath.row == 1 {
-                cell!.textLabel!.text = "tickle"
-            }
+            let sound = sounds[indexPath.row]
+            cell!.textLabel!.text = sound
             
             if cell!.textLabel!.text == mediaLabel {
                 cell!.accessoryType = UITableViewCell.AccessoryType.checkmark
@@ -136,7 +132,8 @@ class MediaViewController: UITableViewController, MPMediaPickerControllerDelegat
         else if indexPath.section == 3 {
             let cell = tableView.cellForRow(at: indexPath)
             cell?.accessoryType = UITableViewCell.AccessoryType.checkmark
-            mediaLabel = cell?.textLabel?.text!
+            let sound = sounds[indexPath.row]
+            mediaLabel = sound
             cell?.setSelected(true, animated: true)
             cell?.setSelected(false, animated: true)
             let cells = tableView.visibleCells

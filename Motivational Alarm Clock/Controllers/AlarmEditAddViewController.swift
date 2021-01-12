@@ -39,6 +39,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         alarmModel=Alarms()
         tableView.reloadData()
         snoozeEnabled = segueInfo.snoozeEnabled
+        
         super.viewWillAppear(animated)
     }
 
@@ -239,9 +240,9 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func unwindFromMediaView(_ segue: UIStoryboardSegue) {
-//        let src = segue.source as! MediaViewController
-//        segueInfo.mediaLabel = src.mediaLabel
-//        segueInfo.mediaID = src.mediaID
+        let src = segue.source as! MediaViewController
+        segueInfo.mediaLabel = src.mediaLabel
+        segueInfo.mediaID = src.mediaID
     }
     
     
