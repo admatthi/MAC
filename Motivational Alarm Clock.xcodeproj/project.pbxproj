@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		4EE5F20025AD271900B9C2EE /* AlarmEditAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F1FF25AD271900B9C2EE /* AlarmEditAddViewController.swift */; };
 		4EE5F20525AD27D200B9C2EE /* WeekdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F20425AD27D200B9C2EE /* WeekdaysViewController.swift */; };
 		4EE5F20A25AD285A00B9C2EE /* TitleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */; };
+		5B0A65A99C1BF3F94F245E80 /* Pods_Motivational_Alarm_Clock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */; };
 		9D8D248425ABABEB00B4E69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248325ABABEB00B4E69D /* AppDelegate.swift */; };
 		9D8D248825ABABEB00B4E69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D248725ABABEB00B4E69D /* ViewController.swift */; };
 		9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248925ABABEB00B4E69D /* Main.storyboard */; };
@@ -31,6 +32,11 @@
 		9D8D249025ABABF000B4E69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8D248E25ABABF000B4E69D /* LaunchScreen.storyboard */; };
 		9D8D249B25ABABF000B4E69D /* Motivational_Alarm_ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D249A25ABABF000B4E69D /* Motivational_Alarm_ClockTests.swift */; };
 		9D8D24A625ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D24A525ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift */; };
+		9D9F987B25AE64F600774EEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D9F987A25AE64F600774EEF /* GoogleService-Info.plist */; };
+		9DA82A2925AE607500289E84 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82A2825AE607500289E84 /* Paywall.swift */; };
+		9DA82A2E25AE609A00289E84 /* PaywallViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA82A2D25AE609A00289E84 /* PaywallViewViewController.swift */; };
+		A195E4FDCEE911D07FC88DC4 /* Pods_Motivational_Alarm_ClockTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBCB738D0DC8EB71211838E /* Pods_Motivational_Alarm_ClockTests.framework */; };
+		FC9E4ED7D069E46898487BA3 /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4A2148F301084685A5354D /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_Clock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F20A4CC19DB8C5AEF27E1DE /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E245DE025ADE7D000C8E57B /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		4E245DF325ADEABE00C8E57B /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		4E77484D25AD2D140041674E /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
@@ -68,6 +76,10 @@
 		4EE5F1FF25AD271900B9C2EE /* AlarmEditAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditAddViewController.swift; sourceTree = "<group>"; };
 		4EE5F20425AD27D200B9C2EE /* WeekdaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysViewController.swift; sourceTree = "<group>"; };
 		4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleEditViewController.swift; sourceTree = "<group>"; };
+		58C0782FD54C4AA3193C7037 /* Pods-Motivational Alarm ClockTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm ClockTests.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm ClockTests/Pods-Motivational Alarm ClockTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5BBCB738D0DC8EB71211838E /* Pods_Motivational_Alarm_ClockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_ClockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71CC806F4EF1508ECFA51837 /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8D493DA693E50DEE2B7370A9 /* Pods-Motivational Alarm ClockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm ClockTests.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm ClockTests/Pods-Motivational Alarm ClockTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D8D248025ABABEB00B4E69D /* Motivational Alarm Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motivational Alarm Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8D248325ABABEB00B4E69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D8D248725ABABEB00B4E69D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +93,12 @@
 		9D8D24A125ABABF000B4E69D /* Motivational Alarm ClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Motivational Alarm ClockUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8D24A525ABABF000B4E69D /* Motivational_Alarm_ClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motivational_Alarm_ClockUITests.swift; sourceTree = "<group>"; };
 		9D8D24A725ABABF000B4E69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D9F987A25AE64F600774EEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9DA82A2825AE607500289E84 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
+		9DA82A2D25AE609A00289E84 /* PaywallViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewViewController.swift; sourceTree = "<group>"; };
+		AD4A2148F301084685A5354D /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock.release.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock.release.xcconfig"; sourceTree = "<group>"; };
+		DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B0A65A99C1BF3F94F245E80 /* Pods_Motivational_Alarm_Clock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A195E4FDCEE911D07FC88DC4 /* Pods_Motivational_Alarm_ClockTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9E4ED7D069E46898487BA3 /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +188,8 @@
 				9D8D249925ABABF000B4E69D /* Motivational Alarm ClockTests */,
 				9D8D24A425ABABF000B4E69D /* Motivational Alarm ClockUITests */,
 				9D8D248125ABABEB00B4E69D /* Products */,
+				D08408E5F9A14DBD40B55A43 /* Pods */,
+				F4895243C023E6DD2E1F6173 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,9 +214,12 @@
 				9D8D248325ABABEB00B4E69D /* AppDelegate.swift */,
 				9D8D248725ABABEB00B4E69D /* ViewController.swift */,
 				9D8D248925ABABEB00B4E69D /* Main.storyboard */,
+				9DA82A2825AE607500289E84 /* Paywall.swift */,
+				9DA82A2D25AE609A00289E84 /* PaywallViewViewController.swift */,
 				9D8D248C25ABABF000B4E69D /* Assets.xcassets */,
 				9D8D248E25ABABF000B4E69D /* LaunchScreen.storyboard */,
 				9D8D249125ABABF000B4E69D /* Info.plist */,
+				9D9F987A25AE64F600774EEF /* GoogleService-Info.plist */,
 			);
 			path = "Motivational Alarm Clock";
 			sourceTree = "<group>";
@@ -216,6 +242,29 @@
 			path = "Motivational Alarm ClockUITests";
 			sourceTree = "<group>";
 		};
+		D08408E5F9A14DBD40B55A43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */,
+				BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */,
+				3F20A4CC19DB8C5AEF27E1DE /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig */,
+				71CC806F4EF1508ECFA51837 /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig */,
+				58C0782FD54C4AA3193C7037 /* Pods-Motivational Alarm ClockTests.debug.xcconfig */,
+				8D493DA693E50DEE2B7370A9 /* Pods-Motivational Alarm ClockTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4895243C023E6DD2E1F6173 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03ADE3E5DB74EB9D2232576B /* Pods_Motivational_Alarm_Clock.framework */,
+				AD4A2148F301084685A5354D /* Pods_Motivational_Alarm_Clock_Motivational_Alarm_ClockUITests.framework */,
+				5BBCB738D0DC8EB71211838E /* Pods_Motivational_Alarm_ClockTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D8D24AA25ABABF000B4E69D /* Build configuration list for PBXNativeTarget "Motivational Alarm Clock" */;
 			buildPhases = (
+				B4B0CEF59795BA45B2FDC2FA /* [CP] Check Pods Manifest.lock */,
 				9D8D247C25ABABEB00B4E69D /* Sources */,
 				9D8D247D25ABABEB00B4E69D /* Frameworks */,
 				9D8D247E25ABABEB00B4E69D /* Resources */,
+				A86C55DA184B26D99C45B628 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D8D24AD25ABABF000B4E69D /* Build configuration list for PBXNativeTarget "Motivational Alarm ClockTests" */;
 			buildPhases = (
+				EF937D2F9677BB6615FD6989 /* [CP] Check Pods Manifest.lock */,
 				9D8D249225ABABF000B4E69D /* Sources */,
 				9D8D249325ABABF000B4E69D /* Frameworks */,
 				9D8D249425ABABF000B4E69D /* Resources */,
@@ -258,9 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D8D24B025ABABF000B4E69D /* Build configuration list for PBXNativeTarget "Motivational Alarm ClockUITests" */;
 			buildPhases = (
+				9C9CD21C55AEA2824CB904D8 /* [CP] Check Pods Manifest.lock */,
 				9D8D249D25ABABF000B4E69D /* Sources */,
 				9D8D249E25ABABF000B4E69D /* Frameworks */,
 				9D8D249F25ABABF000B4E69D /* Resources */,
+				10C4FCF6D8B117EDDB4CA9D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +379,7 @@
 				9D8D248D25ABABF000B4E69D /* Assets.xcassets in Resources */,
 				9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */,
 				4EE5F1F625AD256900B9C2EE /* tickle.mp3 in Resources */,
+				9D9F987B25AE64F600774EEF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +399,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10C4FCF6D8B117EDDB4CA9D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C9CD21C55AEA2824CB904D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A86C55DA184B26D99C45B628 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Motivational Alarm Clock/Pods-Motivational Alarm Clock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4B0CEF59795BA45B2FDC2FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Motivational Alarm Clock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF937D2F9677BB6615FD6989 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Motivational Alarm ClockTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D8D247C25ABABEB00B4E69D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -355,10 +513,12 @@
 				4EE5F20025AD271900B9C2EE /* AlarmEditAddViewController.swift in Sources */,
 				4EE5F1DC25AD247200B9C2EE /* AlarmApplicationDelegate.swift in Sources */,
 				4EE5F19225AD23D800B9C2EE /* AlarmModel.swift in Sources */,
+				9DA82A2E25AE609A00289E84 /* PaywallViewViewController.swift in Sources */,
 				4EE5F1E125AD247A00B9C2EE /* AlarmSchedulerDelegate.swift in Sources */,
 				4EE5F19725AD23F700B9C2EE /* SegueInfo.swift in Sources */,
 				4E245DE125ADE7D000C8E57B /* Scheduler.swift in Sources */,
 				4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */,
+				9DA82A2925AE607500289E84 /* Paywall.swift in Sources */,
 				4EE5F1D725AD246900B9C2EE /* PropertyReflectable.swift in Sources */,
 				4EE5F1D225AD246100B9C2EE /* Persistable.swift in Sources */,
 				4EE5F20525AD27D200B9C2EE /* WeekdaysViewController.swift in Sources */,
@@ -536,6 +696,7 @@
 		};
 		9D8D24AB25ABABF000B4E69D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF873A9C66FDFD5CFE9B3B9F /* Pods-Motivational Alarm Clock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
@@ -554,6 +715,7 @@
 		};
 		9D8D24AC25ABABF000B4E69D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCBC92D3F5F3916F1819E89C /* Pods-Motivational Alarm Clock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
@@ -572,6 +734,7 @@
 		};
 		9D8D24AE25ABABF000B4E69D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58C0782FD54C4AA3193C7037 /* Pods-Motivational Alarm ClockTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -594,6 +757,7 @@
 		};
 		9D8D24AF25ABABF000B4E69D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D493DA693E50DEE2B7370A9 /* Pods-Motivational Alarm ClockTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -616,6 +780,7 @@
 		};
 		9D8D24B125ABABF000B4E69D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F20A4CC19DB8C5AEF27E1DE /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -636,6 +801,7 @@
 		};
 		9D8D24B225ABABF000B4E69D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71CC806F4EF1508ECFA51837 /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
