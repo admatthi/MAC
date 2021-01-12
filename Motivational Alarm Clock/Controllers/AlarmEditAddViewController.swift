@@ -120,7 +120,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
             else if indexPath.row == 1 {
                 cell!.textLabel?.textColor = .white
                 cell!.detailTextLabel?.textColor = .gray
-                cell!.textLabel!.text = "Label"
+                cell!.textLabel!.text = "Title"
                 cell!.detailTextLabel!.text = segueInfo.label
                 cell!.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
             }
