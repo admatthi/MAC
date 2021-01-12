@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RHw-KU-nN3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RHw-KU-nN3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,7 +45,7 @@
         <!--Alarm-->
         <scene sceneID="1pI-lT-iqs">
             <objects>
-                <tableViewController id="KFD-Or-CFY" customClass="HomeTableViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="KFD-Or-CFY" customClass="HomeTableViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5xo-yA-Ygg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,23 +104,23 @@
         <!--Add Alarm-->
         <scene sceneID="5Wf-zb-HDG">
             <objects>
-                <viewController id="38A-Vr-ugb" customClass="AlarmEditAddViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="38A-Vr-ugb" customClass="AlarmEditAddViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1nd-gH-Yu4"/>
                         <viewControllerLayoutGuide type="bottom" id="rnM-Sa-yXG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3BR-aW-k85">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LLd-Sx-lGY">
-                                <rect key="frame" x="0.0" y="81.5" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="113.5" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0Xf-vG-egG"/>
                                 </constraints>
                             </datePicker>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-yc-Uyt">
-                                <rect key="frame" x="0.0" y="157" width="414" height="651"/>
+                                <rect key="frame" x="0.0" y="189" width="414" height="673"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FL-Ew-Gah">
-                                <rect key="frame" x="10" y="96" width="39" height="21"/>
+                                <rect key="frame" x="10" y="128" width="39" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -177,14 +177,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5g-Mx-Z1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Q0G-tO-MeZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3491.3043478260875" y="-348.88392857142856"/>
+            <point key="canvasLocation" x="3462" y="-248"/>
         </scene>
         <!--Repeat-->
         <scene sceneID="NVe-XH-SbN">
             <objects>
-                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="TiZ-Rk-TrC" customClass="WeekdaysViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TiZ-Rk-TrC" customClass="WeekdaysViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="V9g-b4-FKR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1097619608" green="0.10966285319999999" blue="0.11793991180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -343,9 +343,9 @@
         <!--Media View Controller-->
         <scene sceneID="7VC-DU-Jb6">
             <objects>
-                <tableViewController id="sGZ-uh-K6j" customClass="MediaViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="sGZ-uh-K6j" customClass="MediaViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="k26-tH-hdr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1097619608" green="0.10966285319999999" blue="0.11793991180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -384,17 +384,17 @@
         <!--Label-->
         <scene sceneID="gBT-ty-hSM">
             <objects>
-                <viewController id="pqE-Dn-4wp" customClass="TitleEditViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="pqE-Dn-4wp" customClass="TitleEditViewController" customModule="Motivational_Alarm_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dbk-gY-OPR"/>
                         <viewControllerLayoutGuide type="bottom" id="FSa-3P-ppw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hov-Jn-RrW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M49-lP-5N1">
-                                <rect key="frame" x="0.0" y="220" width="414" height="40"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M49-lP-5N1">
+                                <rect key="frame" x="0.0" y="252" width="414" height="40"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="9eO-xw-FSh"/>
@@ -421,16 +421,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxM-iu-DEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="g5v-Ji-rfL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4181.6000000000004" y="-305.39730134932535"/>
+            <point key="canvasLocation" x="4184" y="-248"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cZN-Lf-Coq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="34z-Qh-osK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="34z-Qh-osK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="iyZ-qa-5uB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="9Y7-mY-Zys">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.94401818510000002" green="0.63414740560000005" blue="0.2346394956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
