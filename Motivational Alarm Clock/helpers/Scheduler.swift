@@ -170,28 +170,30 @@ class Scheduler : AlarmSchedulerDelegate
     // workaround for some situation that alarm model is not setting properly (when app on background or not launched)
     func checkNotification() {
         alarmModel = Alarms()
-        let notifications = UIApplication.shared.scheduledLocalNotifications
-        if notifications!.isEmpty {
-            for i in 0..<alarmModel.count {
-                alarmModel.alarms[i].enabled = false
-            }
-        }
-        else {
-            for (i, alarm) in alarmModel.alarms.enumerated() {
-                var isOutDated = true
-                if alarm.onSnooze {
-                    isOutDated = false
-                }
-                for n in notifications! {
-                    if alarm.date >= n.fireDate! {
-                        isOutDated = false
-                    }
-                }
-                if isOutDated {
+        if let notifications = UIApplication.shared.scheduledLocalNotifications{
+            if notifications.isEmpty {
+                for i in 0..<alarmModel.count {
                     alarmModel.alarms[i].enabled = false
                 }
             }
+            else {
+                for (i, alarm) in alarmModel.alarms.enumerated() {
+                    var isOutDated = true
+                    if alarm.onSnooze {
+                        isOutDated = false
+                    }
+                    for n in notifications {
+                        if alarm.date >= n.fireDate! {
+                            isOutDated = false
+                        }
+                    }
+                    if isOutDated {
+                        alarmModel.alarms[i].enabled = false
+                    }
+                }
+            }
         }
+
     }
     
     private func syncAlarmModel() {
