@@ -214,9 +214,9 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         }
         else if segue.identifier == Id.soundSegueIdentifier {
             //TODO
-//            let dist = segue.destination as! MediaViewController
-//            dist.mediaID = segueInfo.mediaID
-//            dist.mediaLabel = segueInfo.mediaLabel
+            let dist = segue.destination as! MediaViewController
+            dist.mediaID = segueInfo.mediaID
+            dist.mediaLabel = segueInfo.mediaLabel
         }
         else if segue.identifier == Id.labelSegueIdentifier {
             let dist = segue.destination as! TitleEditViewController
