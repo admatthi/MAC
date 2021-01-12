@@ -11,6 +11,15 @@ import UIKit
 import Foundation
 import AudioToolbox
 import AVFoundation
+import Firebase
+import Purchases
+import FBSDKCoreKit
+import MBProgressHUD
+import AppsFlyerLib
+import AVKit
+import AVFoundation
+import Kingfisher
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, AlarmApplicationDelegate{
@@ -21,11 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     var alarmModel: Alarms = Alarms()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc : UINavigationController = mainStoryboardIpad.instantiateViewController(withIdentifier: "UIRootNavigationController") as! UINavigationController
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = vc
+//        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc : UINavigationController = mainStoryboardIpad.instantiateViewController(withIdentifier: "UIRootNavigationController") as! UINavigationController
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = vc
+//
         
+        FirebaseApp.configure()
+
         self.window?.makeKeyAndVisible()
         var error: NSError?
         do {
@@ -41,6 +53,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             print("could not active session. err:\(error!.localizedDescription)")
         }
         window?.tintColor = UIColor.red
+        
+    
+        Purchases.debugLogsEnabled = true
+        Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: nil)
         
         return true
     }
