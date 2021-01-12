@@ -99,6 +99,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
             cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: Id.settingIdentifier)
         }
         cell!.backgroundColor = #colorLiteral(red: 0.1725008786, green: 0.1724130809, blue: 0.1806807518, alpha: 1)
+        cell!.selectedBackgroundView?.backgroundColor = .gray
         let image = UIImage(systemName: "chevron.right")
         let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(image?.size.width)!, height:(image?.size.height)!))
         accessory.image = image
@@ -148,6 +149,8 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         else if indexPath.section == 1 {
             cell = UITableViewCell(
                 style: UITableViewCell.CellStyle.default, reuseIdentifier: Id.settingIdentifier)
+            cell!.selectedBackgroundView?.backgroundColor = .gray
+            cell!.backgroundColor = #colorLiteral(red: 0.1725008786, green: 0.1724130809, blue: 0.1806807518, alpha: 1)
             cell!.textLabel!.text = "Delete Alarm"
             cell!.textLabel!.textAlignment = .center
             cell!.textLabel!.textColor = UIColor.red
@@ -181,6 +184,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
             //delete alarm
             alarmModel.alarms.remove(at: segueInfo.curCellIndex)
             performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
+            NotificationCenter.default.post(name: .didReceiveData, object: self, userInfo: nil)
         }
             
     }
