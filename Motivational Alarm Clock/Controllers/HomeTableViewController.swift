@@ -37,6 +37,13 @@ class HomeTableViewController: UITableViewController{
     {
         alarmModel = Alarms()
         tableView.reloadData()
+        //dynamically append the edit button
+        if alarmModel.count != 0 {
+            self.navigationItem.leftBarButtonItem = editButtonItem
+        }
+        else {
+            self.navigationItem.leftBarButtonItem = nil
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
