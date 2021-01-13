@@ -174,7 +174,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                 cell?.setSelected(true, animated: false)
                 cell?.setSelected(false, animated: false)
             case 2:
-                performSegue(withIdentifier: Id.soundSegueIdentifier, sender: self)
+                performSegue(withIdentifier: Id.selectSoundSegueIdentifier, sender: self)
                 cell?.setSelected(true, animated: false)
                 cell?.setSelected(false, animated: false)
             default:
@@ -205,7 +205,8 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
             let dist = segue.destination as! HomeTableViewController
             let cells = dist.tableView.visibleCells
             for cell in cells {
-                let sw = cell.accessoryView as! UISwitch
+                if let cell = cell as? HomeItemTableViewCell {
+                let sw = cell.itemSwitch!
                 if sw.tag > segueInfo.curCellIndex
                 {
                     sw.tag -= 1
@@ -213,11 +214,12 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
             }
             alarmScheduler.reSchedule()
         }
-        else if segue.identifier == Id.soundSegueIdentifier {
+        }
+        else if segue.identifier == Id.selectSoundSegueIdentifier {
             //TODO
-            let dist = segue.destination as! MediaViewController
-            dist.mediaID = segueInfo.mediaID
-            dist.mediaLabel = segueInfo.mediaLabel
+            let dist = segue.destination as! SelectSoundViewController
+//            dist.mediaID = segueInfo.mediaID
+//            dist.mediaLabel = segueInfo.mediaLabel
         }
         else if segue.identifier == Id.labelSegueIdentifier {
             let dist = segue.destination as! TitleEditViewController

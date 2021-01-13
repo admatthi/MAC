@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		4E245DE125ADE7D000C8E57B /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DE025ADE7D000C8E57B /* Scheduler.swift */; };
 		4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E245DF325ADEABE00C8E57B /* MediaViewController.swift */; };
+		4E60EC5C25AF7AAF0049D4ED /* SelectSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */; };
+		4E60EC6125AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */; };
 		4E77484F25AD2D140041674E /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77484D25AD2D140041674E /* UIWindow+Extension.swift */; };
 		4E77485025AD2D140041674E /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77484E25AD2D140041674E /* NotificationName+Extension.swift */; };
+		4E9724FA25AFA09B0070FF50 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */; };
+		4EBD221325AF5A96008530A2 /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */; };
 		4EDA8E7D25AE69C7005DAE2C /* newtrack2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */; };
 		4EDA8EB325AE714D005DAE2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA8EB225AE714D005DAE2C /* GoogleService-Info.plist */; };
 		4EE5F19225AD23D800B9C2EE /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */; };
@@ -62,8 +66,12 @@
 		3F20A4CC19DB8C5AEF27E1DE /* Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; path = "Target Support Files/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests/Pods-Motivational Alarm Clock-Motivational Alarm ClockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E245DE025ADE7D000C8E57B /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		4E245DF325ADEABE00C8E57B /* MediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundViewController.swift; sourceTree = "<group>"; };
+		4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPickCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E77484D25AD2D140041674E /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		4E77484E25AD2D140041674E /* NotificationName+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
+		4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
 		4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = newtrack2.mp3; sourceTree = "<group>"; };
 		4EDA8EB225AE714D005DAE2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EE5F19125AD23D800B9C2EE /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
@@ -134,6 +142,9 @@
 		4EE5F18425AD234600B9C2EE /* views */ = {
 			isa = PBXGroup;
 			children = (
+				4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */,
+				4E60EC6025AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift */,
+				4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -155,6 +166,7 @@
 				4E245DF325ADEABE00C8E57B /* MediaViewController.swift */,
 				4EE5F20425AD27D200B9C2EE /* WeekdaysViewController.swift */,
 				4EE5F20925AD285A00B9C2EE /* TitleEditViewController.swift */,
+				4E60EC5B25AF7AAF0049D4ED /* SelectSoundViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -516,14 +528,18 @@
 				4E77484F25AD2D140041674E /* UIWindow+Extension.swift in Sources */,
 				4EE5F20025AD271900B9C2EE /* AlarmEditAddViewController.swift in Sources */,
 				4EE5F1DC25AD247200B9C2EE /* AlarmApplicationDelegate.swift in Sources */,
+				4E60EC6125AF7D1D0049D4ED /* SoundPickCollectionViewCell.swift in Sources */,
+				4EBD221325AF5A96008530A2 /* HomeItemTableViewCell.swift in Sources */,
 				4EE5F19225AD23D800B9C2EE /* AlarmModel.swift in Sources */,
 				9DA82A2E25AE609A00289E84 /* PaywallViewViewController.swift in Sources */,
 				4EE5F1E125AD247A00B9C2EE /* AlarmSchedulerDelegate.swift in Sources */,
 				4EE5F19725AD23F700B9C2EE /* SegueInfo.swift in Sources */,
 				4E245DE125ADE7D000C8E57B /* Scheduler.swift in Sources */,
+				4E60EC5C25AF7AAF0049D4ED /* SelectSoundViewController.swift in Sources */,
 				4E245DF425ADEABE00C8E57B /* MediaViewController.swift in Sources */,
 				9DA82A2925AE607500289E84 /* Paywall.swift in Sources */,
 				4EE5F1D725AD246900B9C2EE /* PropertyReflectable.swift in Sources */,
+				4E9724FA25AFA09B0070FF50 /* CategoryCollectionViewCell.swift in Sources */,
 				4EE5F1D225AD246100B9C2EE /* Persistable.swift in Sources */,
 				4EE5F20525AD27D200B9C2EE /* WeekdaysViewController.swift in Sources */,
 				9D8D248825ABABEB00B4E69D /* ViewController.swift in Sources */,

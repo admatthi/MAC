@@ -52,7 +52,7 @@ class HomeTableViewController: UITableViewController{
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 120
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -80,44 +80,43 @@ class HomeTableViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: Id.alarmCellIdentifier)
-        if (cell == nil) {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: Id.alarmCellIdentifier)
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeItemTableViewCell") as! HomeItemTableViewCell
         //cell text
-        cell!.selectionStyle = .none
-        cell!.tag = indexPath.row
+        cell.selectionStyle = .none
+        cell.tag = indexPath.row
+        cell.mainView.layer.cornerRadius = 10
+        cell.soundImageView.layer.cornerRadius = 10
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
-        let amAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 20.0)]
-        let str = NSMutableAttributedString(string: alarm.formattedTime, attributes: amAttr)
-        let timeAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 45.0)]
-        str.addAttributes(timeAttr, range: NSMakeRange(0, str.length-2))
-        cell!.textLabel?.attributedText = str
-        cell!.textLabel?.textColor = .white
-        cell!.detailTextLabel?.textColor = .white
-        cell!.detailTextLabel?.text = alarm.label
+//        let amAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 20.0)]
+//        let str = NSMutableAttributedString(string: alarm.formattedTime, attributes: amAttr)
+//        let timeAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 45.0)]
+//        str.addAttributes(timeAttr, range: NSMakeRange(0, str.length-2))
+//        cell!.textLabel?.attributedText = str
+//        cell!.textLabel?.textColor = .white
+//        cell!.detailTextLabel?.textColor = .white
+        cell.titleLable.text = alarm.label
+        cell.timeLabel.text = alarm.formattedTime
         //append switch button
-        let sw = UISwitch(frame: CGRect())
-        sw.transform = CGAffineTransform(scaleX: 0.9, y: 0.9);
-        
-        //tag is used to indicate which row had been touched
-        sw.tag = indexPath.row
-        sw.addTarget(self, action: #selector(self.switchTapped(_:)), for: UIControl.Event.valueChanged)
+//        let sw = UISwitch(frame: CGRect())
+//        sw.transform = CGAffineTransform(scaleX: 0.9, y: 0.9);
+//
+//        //tag is used to indicate which row had been touched
+//        sw.tag = indexPath.row
+        cell.itemSwitch.addTarget(self, action: #selector(self.switchTapped(_:)), for: UIControl.Event.valueChanged)
         if alarm.enabled {
-            cell!.backgroundColor = UIColor.black
-            cell!.textLabel?.alpha = 1.0
-            cell!.detailTextLabel?.alpha = 1.0
-            sw.setOn(true, animated: false)
+            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
+            cell.titleLable?.alpha = 1.0
+            cell.timeLabel.alpha = 1.0
+            cell.itemSwitch.setOn(true, animated: false)
         } else {
-            cell!.backgroundColor = UIColor.black
-            cell!.textLabel?.alpha = 0.5
-            cell!.detailTextLabel?.alpha = 0.5
+            cell.mainView.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 0.8)
+            cell.titleLable.alpha = 0.5
+            cell.timeLabel.alpha = 0.5
         }
-        cell!.accessoryView = sw
         
         //delete empty seperator line
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        return cell!
+        return cell
     }
     
     @IBAction func switchTapped(_ sender: UISwitch) {
@@ -142,11 +141,14 @@ class HomeTableViewController: UITableViewController{
             alarmModel.alarms.remove(at: index)
             let cells = tableView.visibleCells
             for cell in cells {
-                let sw = cell.accessoryView as! UISwitch
-                //adjust saved index when row deleted
-                if sw.tag > index {
-                    sw.tag -= 1
+                if let cell = cell as? HomeItemTableViewCell {
+                    let sw = cell.itemSwitch!
+                    //adjust saved index when row deleted
+                    if sw.tag > index {
+                        sw.tag -= 1
+                    }
                 }
+
             }
             if alarmModel.count == 0 {
                 self.navigationItem.leftBarButtonItem = nil

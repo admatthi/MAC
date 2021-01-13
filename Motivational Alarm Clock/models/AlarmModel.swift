@@ -83,7 +83,12 @@ class Alarms: Persistable {
     
     func unpersist() {
         for key in ud.dictionaryRepresentation().keys {
-            UserDefaults.standard.removeObject(forKey: key.description)
+            if key.description.contains("revenuecat"){
+                
+            }else{
+                UserDefaults.standard.removeObject(forKey: key.description)
+            }
+            
         }
     }
     
