@@ -30,15 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     var alarmModel: Alarms = Alarms()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc : UINavigationController = mainStoryboardIpad.instantiateViewController(withIdentifier: "UIRootNavigationController") as! UINavigationController
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        self.window?.rootViewController = vc
-//
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc : UINavigationController = mainStoryboardIpad.instantiateViewController(withIdentifier: "UIRootNavigationController") as! UINavigationController
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
         
         FirebaseApp.configure()
 
-        self.window?.makeKeyAndVisible()
+        
         var error: NSError?
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
