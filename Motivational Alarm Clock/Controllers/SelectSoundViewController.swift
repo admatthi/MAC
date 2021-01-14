@@ -25,6 +25,9 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     var audioPlayer: AVAudioPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let category = selectedSound?.category{
+            selectedCategory = category
+        }
         var error: NSError?
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
@@ -50,18 +53,21 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
         layout.itemSize = CGSize(width: 80, height: 90)
         collectionView.collectionViewLayout = layout
         
-        tagSelection(tag: selectedCategory)
+        tagSelection(tag: selectedCategory, isFirst: false)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     performSegue(withIdentifier: Id.soundUnwindIdentifier, sender: self)
         
     }
-    func tagSelection(tag:String){
+    func tagSelection(tag:String,isFirst:Bool){
         filteredSounds = allSounds.filter({$0.category == tag})
-        if filteredSounds.count > 0 {
-            selectedSound = filteredSounds[0]
+        if isFirst {
+            if filteredSounds.count > 0 {
+                selectedSound = filteredSounds[0]
+            }
         }
+        self.tagsCollectionView.reloadData()
         self.collectionView.reloadData()
     }
     //AVAudioPlayerDelegate protocol
@@ -179,7 +185,7 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
             let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
             selectedCategory = soundsCategories[indexPath.row]
-            tagSelection(tag: selectedCategory)
+            tagSelection(tag: selectedCategory, isFirst: true)
             tagsCollectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
             self.tagsCollectionView.reloadData()
         }else{
