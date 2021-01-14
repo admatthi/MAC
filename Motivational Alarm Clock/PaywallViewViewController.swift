@@ -31,6 +31,8 @@ var didpurchase = Bool()
 
 class PaywallViewViewController: UIViewController {
     
+    @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var payButton: UIButton!
     var purchases = Purchases.configure(withAPIKey: "slBUTCfxpPxhDhmESLETLyjJtFpYzjCj", appUserID: nil)
     
     var delegate : SwiftPaywallDelegate?
@@ -118,7 +120,8 @@ class PaywallViewViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dismissButton.layer.cornerRadius = 12.5
+        payButton.layer.cornerRadius = 20
         ref = Database.database().reference()
 
         Purchases.shared.offerings { (offerings, error) in
@@ -137,7 +140,10 @@ class PaywallViewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func dismissButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -172,9 +172,9 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
                 cell?.setSelected(true, animated: false)
                 cell?.setSelected(false, animated: false)
             case 1:
-                performSegue(withIdentifier: Id.labelSegueIdentifier, sender: self)
-//                cell?.setSelected(true, animated: false)
-//                cell?.setSelected(false, animated: false)
+//                performSegue(withIdentifier: Id.labelSegueIdentifier, sender: self)
+                cell?.setSelected(true, animated: false)
+                cell?.setSelected(false, animated: false)
             case 2:
                 performSegue(withIdentifier: Id.selectSoundSegueIdentifier, sender: self)
                 cell?.setSelected(true, animated: false)

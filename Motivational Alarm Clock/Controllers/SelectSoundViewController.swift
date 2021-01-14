@@ -11,7 +11,7 @@ import Foundation
 import AudioToolbox
 import AVFoundation
 class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
-    var allSounds:[Sounds] = [Sounds(soundName: "newtrack2", title: "A Heart Less heavy", image: "giveup", category: "Motivation"),Sounds(soundName: "tickle", title: "yes yes you can", image: "youcan", category: "Self Help"),Sounds(soundName: "bell", title: "A Mighty Heart", image: "giveup", category: "Motivation")]
+
     var filteredSounds:[Sounds] = []
     var selectedSound:Sounds?
     var soundsCategories = ["Motivation","Self Help","Fitness","faith"]
