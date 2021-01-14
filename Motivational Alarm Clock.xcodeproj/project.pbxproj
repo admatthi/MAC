@@ -15,6 +15,8 @@
 		4E77485025AD2D140041674E /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77484E25AD2D140041674E /* NotificationName+Extension.swift */; };
 		4E9724FA25AFA09B0070FF50 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */; };
 		4E9724FF25AFD3250070FF50 /* SoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9724FE25AFD3250070FF50 /* SoundData.swift */; };
+		4E97250525AFDEC70070FF50 /* Time To Wake Up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E97250325AFDEC70070FF50 /* Time To Wake Up.mp3 */; };
+		4E97250625AFDEC70070FF50 /* Rise & Grind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E97250425AFDEC70070FF50 /* Rise & Grind.mp3 */; };
 		4EBD221325AF5A96008530A2 /* HomeItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */; };
 		4EDA8E7D25AE69C7005DAE2C /* newtrack2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */; };
 		4EDA8EB325AE714D005DAE2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA8EB225AE714D005DAE2C /* GoogleService-Info.plist */; };
@@ -73,6 +75,8 @@
 		4E77484E25AD2D140041674E /* NotificationName+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
 		4E9724F925AFA09B0070FF50 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E9724FE25AFD3250070FF50 /* SoundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundData.swift; sourceTree = "<group>"; };
+		4E97250325AFDEC70070FF50 /* Time To Wake Up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Time To Wake Up.mp3"; sourceTree = "<group>"; };
+		4E97250425AFDEC70070FF50 /* Rise & Grind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rise & Grind.mp3"; sourceTree = "<group>"; };
 		4EBD221225AF5A96008530A2 /* HomeItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemTableViewCell.swift; sourceTree = "<group>"; };
 		4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = newtrack2.mp3; sourceTree = "<group>"; };
 		4EDA8EB225AE714D005DAE2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 		4EE5F1F225AD255B00B9C2EE /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				4E97250425AFDEC70070FF50 /* Rise & Grind.mp3 */,
+				4E97250325AFDEC70070FF50 /* Time To Wake Up.mp3 */,
 				4EDA8E7C25AE69C7005DAE2C /* newtrack2.mp3 */,
 				4EE5F1F325AD256900B9C2EE /* bell.mp3 */,
 				4EE5F1F425AD256900B9C2EE /* tickle.mp3 */,
@@ -392,12 +398,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E97250525AFDEC70070FF50 /* Time To Wake Up.mp3 in Resources */,
 				9D8D249025ABABF000B4E69D /* LaunchScreen.storyboard in Resources */,
 				4EE5F1F525AD256900B9C2EE /* bell.mp3 in Resources */,
 				4EDA8E7D25AE69C7005DAE2C /* newtrack2.mp3 in Resources */,
 				9D8D248D25ABABF000B4E69D /* Assets.xcassets in Resources */,
 				9D8D248B25ABABEB00B4E69D /* Main.storyboard in Resources */,
 				4EE5F1F625AD256900B9C2EE /* tickle.mp3 in Resources */,
+				4E97250625AFDEC70070FF50 /* Rise & Grind.mp3 in Resources */,
 				4EDA8EB325AE714D005DAE2C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

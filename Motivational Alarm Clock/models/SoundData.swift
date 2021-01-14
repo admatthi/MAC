@@ -8,4 +8,6 @@
 
 import Foundation
 
-var allSounds:[Sounds] = [Sounds(soundName: "newtrack2", title: "A Heart Less heavy", image: "giveup", category: "Motivation"),Sounds(soundName: "tickle", title: "yes yes you can", image: "youcan", category: "Self Help"),Sounds(soundName: "bell", title: "A Mighty Heart", image: "giveup", category: "Motivation")]
+
+var allSounds:[Sounds] = [Sounds(soundName: "newtrack2", title: "A Heart Less heavy", image: "giveup", category: "Motivation"),Sounds(soundName: "bell", title: "A Mighty Heart", image: "youcan", category: "Motivation"),Sounds(soundName: "Rise & Grind", title: "Rise & Grind", image: "workhard", category: "Motivation"),Sounds(soundName: "Time To Wake Up", title: "Time To Wake Up", image: "nowandnever", category: "Self Help")]
+
