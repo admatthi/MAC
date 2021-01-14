@@ -58,6 +58,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         tempAlarm.mediaID = segueInfo.mediaID
         tempAlarm.snoozeEnabled = snoozeEnabled
         tempAlarm.imageName = segueInfo.imageName
+        tempAlarm.category = segueInfo.category
         tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
         tempAlarm.uuid = UUID().uuidString
         tempAlarm.onSnooze = false
@@ -221,6 +222,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
             let dist = segue.destination as! SelectSoundViewController
 //            dist.mediaID = segueInfo.mediaID
 //            dist.mediaLabel = segueInfo.mediaLabel
+            dist.selectedSound = Sounds(soundName: segueInfo.mediaLabel, title: segueInfo.label, image: segueInfo.imageName, category: segueInfo.category)
         }
         else if segue.identifier == Id.labelSegueIdentifier {
             let dist = segue.destination as! TitleEditViewController
