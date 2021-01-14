@@ -129,15 +129,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
     //AlarmApplicationDelegate protocol
     func playSound(_ soundName: String) {
         
-        //vibrate phone first
-        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-        //set vibrate callback
-        AudioServicesAddSystemSoundCompletion(SystemSoundID(kSystemSoundID_Vibrate),nil,
-            nil,
-            { (_:SystemSoundID, _:UnsafeMutableRawPointer?) -> Void in
-                AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            },
-            nil)
+//        //vibrate phone first
+//        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+//        //set vibrate callback
+//        AudioServicesAddSystemSoundCompletion(SystemSoundID(kSystemSoundID_Vibrate),nil,
+//            nil,
+//            { (_:SystemSoundID, _:UnsafeMutableRawPointer?) -> Void in
+//                AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+//            },
+//            nil)
         let url = URL(fileURLWithPath: Bundle.main.path(forResource: soundName, ofType: "mp3")!)
         
         var error: NSError?
