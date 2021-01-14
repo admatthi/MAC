@@ -86,6 +86,8 @@ class HomeTableViewController: UITableViewController{
         cell.tag = indexPath.row
         cell.mainView.layer.cornerRadius = 10
         cell.soundImageView.layer.cornerRadius = 10
+        cell.soundImageView.layer.borderWidth = 1
+        cell.soundImageView.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
         cell.soundImageView.image = UIImage(named: alarm.imageName)

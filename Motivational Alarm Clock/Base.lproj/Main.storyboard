@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -264,26 +265,27 @@ subscribing. This value will always default to the plan's subscription term leng
                                             <rect key="frame" x="20" y="10" width="374" height="100"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 8" translatesAutoresizingMaskIntoConstraints="NO" id="hef-Zk-5gz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <rect key="frame" x="0.0" y="5" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="KbJ-Ev-Vh6"/>
-                                                        <constraint firstAttribute="width" constant="100" id="uah-sX-I3G"/>
+                                                        <constraint firstAttribute="width" constant="90" id="uah-sX-I3G"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:30 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYI-LD-xYV">
-                                                    <rect key="frame" x="115" y="15" width="79.5" height="30.5"/>
+                                                    <rect key="frame" x="105" y="15" width="79.5" height="30.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Only Live Once" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gn-xh-Y6h">
-                                                    <rect key="frame" x="115" y="63" width="141" height="22"/>
+                                                    <rect key="frame" x="105" y="63" width="141" height="22"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEk-mn-Zgs">
                                                     <rect key="frame" x="310" y="34.5" width="51" height="31"/>
+                                                    <color key="onTintColor" systemColor="tertiaryLabelColor"/>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
@@ -291,9 +293,10 @@ subscribing. This value will always default to the plan's subscription term leng
                                                 <constraint firstItem="2Gn-xh-Y6h" firstAttribute="leading" secondItem="hef-Zk-5gz" secondAttribute="trailing" constant="15" id="6Vt-vx-7Fp"/>
                                                 <constraint firstItem="kEk-mn-Zgs" firstAttribute="centerY" secondItem="z6B-2V-Xyo" secondAttribute="centerY" id="DYu-c9-Bcm"/>
                                                 <constraint firstAttribute="trailing" secondItem="kEk-mn-Zgs" secondAttribute="trailing" constant="15" id="EiG-o8-yfo"/>
+                                                <constraint firstAttribute="bottom" secondItem="hef-Zk-5gz" secondAttribute="bottom" constant="5" id="IaN-LP-LYc"/>
                                                 <constraint firstItem="uYI-LD-xYV" firstAttribute="leading" secondItem="hef-Zk-5gz" secondAttribute="trailing" constant="15" id="TJ8-qI-82D"/>
-                                                <constraint firstItem="hef-Zk-5gz" firstAttribute="centerY" secondItem="z6B-2V-Xyo" secondAttribute="centerY" id="ZHt-uD-nQO"/>
                                                 <constraint firstAttribute="bottom" secondItem="2Gn-xh-Y6h" secondAttribute="bottom" constant="15" id="eVu-Vc-Gnl"/>
+                                                <constraint firstItem="hef-Zk-5gz" firstAttribute="top" secondItem="z6B-2V-Xyo" secondAttribute="top" constant="5" id="iUv-OZ-nOE"/>
                                                 <constraint firstItem="uYI-LD-xYV" firstAttribute="top" secondItem="z6B-2V-Xyo" secondAttribute="top" constant="15" id="sP4-U3-wRV"/>
                                                 <constraint firstItem="hef-Zk-5gz" firstAttribute="leading" secondItem="z6B-2V-Xyo" secondAttribute="leading" id="yJm-kg-MDr"/>
                                             </constraints>
@@ -716,13 +719,15 @@ subscribing. This value will always default to the plan's subscription term leng
                                                             <state key="normal" image="checkMark"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEF-nP-OdO">
-                                                            <rect key="frame" x="71" y="59.5" width="25" height="25"/>
+                                                            <rect key="frame" x="68.5" y="57" width="30" height="30"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="25" id="MmS-fT-fmv"/>
-                                                                <constraint firstAttribute="height" constant="25" id="fAx-xS-n90"/>
+                                                                <constraint firstAttribute="width" constant="30" id="MmS-fT-fmv"/>
+                                                                <constraint firstAttribute="height" constant="30" id="fAx-xS-n90"/>
                                                             </constraints>
                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" image="pause.fill" catalog="system"/>
+                                                            <state key="normal">
+                                                                <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
+                                                            </state>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -865,6 +870,9 @@ subscribing. This value will always default to the plan's subscription term leng
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
