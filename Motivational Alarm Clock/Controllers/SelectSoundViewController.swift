@@ -11,14 +11,17 @@ import Foundation
 import AudioToolbox
 import AVFoundation
 class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
-    var allSounds:[Sounds] = [Sounds(soundName: "newtrack2", title: "A Heart Less heavy", image: "give up", category: "Motivation"),Sounds(soundName: "tickle", title: "yes yes you can", image: "you can", category: "Self Help"),Sounds(soundName: "bell", title: "A Mighty Heart", image: "give up", category: "Motivation")]
+    var allSounds:[Sounds] = [Sounds(soundName: "newtrack2", title: "A Heart Less heavy", image: "giveup", category: "Motivation"),Sounds(soundName: "tickle", title: "yes yes you can", image: "youcan", category: "Self Help"),Sounds(soundName: "bell", title: "A Mighty Heart", image: "giveup", category: "Motivation")]
     var filteredSounds:[Sounds] = []
     var selectedSound:Sounds?
     var soundsCategories = ["Motivation","Self Help","Fitness","faith"]
     var selectedCategory = "Motivation"
     @IBOutlet weak var tagsCollectionView: UICollectionView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var mediaLabel: String!
+    var mediaID: String!
+    var image:String!
+    var soundtitle:String!
     var audioPlayer: AVAudioPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +54,8 @@ class SelectSoundViewController: UIViewController ,AVAudioPlayerDelegate{
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.stopSound()
+    performSegue(withIdentifier: Id.soundUnwindIdentifier, sender: self)
+        
     }
     func tagSelection(tag:String){
         filteredSounds = allSounds.filter({$0.category == tag})
@@ -146,6 +150,7 @@ extension SelectSoundViewController:UICollectionViewDataSource,UICollectionViewD
             let sound = filteredSounds[indexPath.row]
             cell.playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
             cell.playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .selected)
+            cell.coverImageView.image = UIImage(named: sound.image)
             if let selected = selectedSound {
                 if sound == selected{
                     cell.playPauseButton.isHidden = false

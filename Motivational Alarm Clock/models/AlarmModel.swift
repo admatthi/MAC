@@ -19,10 +19,10 @@ struct Alarm: PropertyReflectable {
     var mediaLabel: String = "newtrack2"
     var label: String = "Alarm"
     var onSnooze: Bool = false
-    
+    var imageName: String = "nowandnever"
     init(){}
     
-    init(date:Date, enabled:Bool, snoozeEnabled:Bool, repeatWeekdays:[Int], uuid:String, mediaID:String, mediaLabel:String, label:String, onSnooze: Bool){
+    init(date:Date, enabled:Bool, snoozeEnabled:Bool, repeatWeekdays:[Int], uuid:String, mediaID:String, mediaLabel:String, label:String, onSnooze: Bool,imageName:String){
         self.date = date
         self.enabled = enabled
         self.snoozeEnabled = snoozeEnabled
@@ -32,6 +32,7 @@ struct Alarm: PropertyReflectable {
         self.mediaLabel = mediaLabel
         self.label = label
         self.onSnooze = onSnooze
+        self.imageName = imageName
     }
     
     init(_ dict: PropertyReflectable.RepresentationType){
@@ -44,9 +45,10 @@ struct Alarm: PropertyReflectable {
         mediaLabel = dict["mediaLabel"] as! String
         label = dict["label"] as! String
         onSnooze = dict["onSnooze"] as! Bool
+        imageName = dict["imageName"] as? String ?? ""
     }
     
-    static var propertyCount: Int = 9
+    static var propertyCount: Int = 10
 }
 
 extension Alarm {

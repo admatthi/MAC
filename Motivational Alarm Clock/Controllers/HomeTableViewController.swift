@@ -75,7 +75,7 @@ class HomeTableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isEditing {
 
-            performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled, snoozeEnabled: alarmModel.alarms[indexPath.row].snoozeEnabled))
+            performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled, snoozeEnabled: alarmModel.alarms[indexPath.row].snoozeEnabled, imageName: alarmModel.alarms[indexPath.row].imageName))
         }
     }
     
@@ -86,7 +86,9 @@ class HomeTableViewController: UITableViewController{
         cell.tag = indexPath.row
         cell.mainView.layer.cornerRadius = 10
         cell.soundImageView.layer.cornerRadius = 10
+        
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
+        cell.soundImageView.image = UIImage(named: alarm.imageName)
 //        let amAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 20.0)]
 //        let str = NSMutableAttributedString(string: alarm.formattedTime, attributes: amAttr)
 //        let timeAttr: [NSAttributedString.Key : Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont.systemFont(ofSize: 45.0)]
@@ -169,7 +171,7 @@ class HomeTableViewController: UITableViewController{
         if segue.identifier == Id.addSegueIdentifier {
             addEditController.navigationItem.title = "Add Alarm"
             addEditController.modalPresentationStyle = .fullScreen
-            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: "newtrack2", mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false)
+            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: "newtrack2", mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false, imageName: "nowandnever")
         }
         else if segue.identifier == Id.editSegueIdentifier {
             addEditController.navigationItem.title = "Edit Alarm"
@@ -191,13 +193,16 @@ class HomeTableViewController: UITableViewController{
         let cells = tableView.visibleCells
         for cell in cells {
             if cell.tag == index {
-                let sw = cell.accessoryView as! UISwitch
-                if alarmModel.alarms[index].repeatWeekdays.isEmpty {
-                    sw.setOn(false, animated: false)
-                    cell.backgroundColor = UIColor.black
-                    cell.textLabel?.alpha = 0.5
-                    cell.detailTextLabel?.alpha = 0.5
+               if let homeCell = cell as? HomeItemTableViewCell {
+                    let sw = homeCell.itemSwitch
+                    if alarmModel.alarms[index].repeatWeekdays.isEmpty {
+                        sw?.setOn(false, animated: false)
+                        homeCell.backgroundColor = UIColor.black
+                        homeCell.textLabel?.alpha = 0.5
+                        homeCell.detailTextLabel?.alpha = 0.5
+                    }
                 }
+
             }
         }
     }

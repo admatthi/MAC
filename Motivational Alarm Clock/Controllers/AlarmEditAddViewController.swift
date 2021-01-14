@@ -57,6 +57,7 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
         tempAlarm.mediaLabel = segueInfo.mediaLabel
         tempAlarm.mediaID = segueInfo.mediaID
         tempAlarm.snoozeEnabled = snoozeEnabled
+        tempAlarm.imageName = segueInfo.imageName
         tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
         tempAlarm.uuid = UUID().uuidString
         tempAlarm.onSnooze = false
@@ -242,9 +243,15 @@ class AlarmEditAddViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func unwindFromMediaView(_ segue: UIStoryboardSegue) {
-        let src = segue.source as! MediaViewController
-        segueInfo.mediaLabel = src.mediaLabel
-        segueInfo.mediaID = src.mediaID
+        let src = segue.source as! SelectSoundViewController
+        if let sound = src.selectedSound {
+            segueInfo.mediaLabel = sound.soundName
+            segueInfo.label = sound.title
+            segueInfo.mediaID = ""
+            segueInfo.imageName = sound.image
+            
+        }
+        
     }
     
     

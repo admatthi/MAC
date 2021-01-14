@@ -430,12 +430,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="XPO-t7-3mR"/>
-                    <connections>
-                        <segue destination="Qry-mq-YxQ" kind="unwind" identifier="soundUnwindSegue" unwindAction="unwindFromMediaView:" id="tBR-bL-OSO"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlI-fv-wei" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Qry-mq-YxQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4215" y="454"/>
         </scene>
@@ -648,9 +644,11 @@
                     <connections>
                         <outlet property="collectionView" destination="waH-aA-bAT" id="2GW-uQ-xw5"/>
                         <outlet property="tagsCollectionView" destination="9Oy-vp-0PY" id="BSw-ky-qaz"/>
+                        <segue destination="qsU-xv-MIo" kind="unwind" identifier="soundUnwindSegue" unwindAction="unwindFromMediaView:" id="mtj-Cl-c9Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkg-sk-UXR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qsU-xv-MIo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5257.971014492754" y="-250.44642857142856"/>
         </scene>
